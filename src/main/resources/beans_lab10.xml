@@ -3,4 +3,23 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+
+    <bean id="vehicul" class="problema2.Vehicul">
+        <constructor-arg value="Audi"/>
+        <constructor-arg value="10000"/>
+    </bean>
+
+    <bean id="auto1" class="problema2.Autoturism" parent="vehicul" >
+        <property name="volum_portbagaj" value="4"/>
+        <property name="greutate" value="5"/>
+    </bean>
+
+    <bean id="auto2" class="problema2.Autoturism" parent="vehicul" >
+        <constructor-arg value="4"/>
+        <constructor-arg value="10000"/>
+    </bean>
+
+    <bean id="moto" class="problema2.Motocicleta" parent="vehicul" >
+        <constructor-arg value="10000"/>
+    </bean>
 </beans>
